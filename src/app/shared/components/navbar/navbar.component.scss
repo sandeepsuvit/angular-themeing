@@ -1,0 +1,43 @@
+.navbar {
+    background: #efefef;
+    clear: both;
+    width: 100%;
+    display: inline-block;
+}
+
+.list-inline {
+    list-style-type: none; 
+    display: inline-block;
+    &-item {
+        float: left;
+        a {
+            text-decoration: none;
+            color: #666;
+            display: block;
+            padding: 1rem;
+            font-weight: 500;
+            &:hover {
+                color: #333;
+            }
+        }
+    }
+}
+
+.float{
+    &-left {
+        float: left;
+    }
+    &-right {
+        float: right;
+    }
+}
+
+.btn {
+    border: none;
+    padding: 1rem;
+    border-radius: .2rem;
+    &-primary {
+        color: #fff;
+        background: lighten($color: blue, $amount: 10%);
+    }
+}
