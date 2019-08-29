@@ -1,0 +1,39 @@
+/* Global imports */
+@import "./src/assets/styles/imports";
+
+/* -------------------------------------------------------------------------- */
+// Light theme
+// Note: Dont include any structural styles (like height, width, margin, padding) in the themeing sections
+
+:host-context(.light-theme) {
+    // Can apply global styles here
+
+    // Layout
+    .layout-container {
+        background: $light-layout-bg-color;
+        color: $light-layout-txt-color;
+    }
+}
+
+// Dark theme
+// Note: Dont include any structural styles (like height, width, margin, padding) in the themeing sections
+
+:host-context(.dark-theme) {
+    // Can apply global styles here
+
+    // Layout
+    .layout-container {
+        background: $dark-layout-bg-color;
+        color: $dark-layout-txt-color
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Note: Include all structural styles (like height, width, margin, padding) here
+
+// Layout
+.layout-container {
+    height: 100%;
+    // background: #fff; -> This will be controlled by the theme
+    // color: #333; -> This will be controlled by the theme
+}

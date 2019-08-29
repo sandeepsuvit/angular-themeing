@@ -1,5 +1,61 @@
+/* Global imports */
+@import "./src/assets/styles/imports";
+
+
+/* -------------------------------------------------------------------------- */
+// Light theme
+// Note: Dont include any structural styles (like height, width, margin, padding) in the themeing sections
+
+:host-context(.light-theme) {
+    // Can apply global styles here
+
+    // Navbar
+    .navbar {
+        background-color: $light-navbar-bg-color;
+    }
+
+    // List
+    .list-inline {
+        &-item {
+            a {
+                color: $light-list-item-link-color;
+                &:hover {
+                    color: $light-list-item-link-hover-color;
+                }
+            }
+        }
+    }
+}
+
+// Dark theme
+// Note: Dont include any structural styles (like height, width, margin, padding) in the themeing sections
+
+:host-context(.dark-theme) {
+    // Can apply global styles here
+    
+    // Navbar
+    .navbar {
+        background-color: $dark-navbar-bg-color;
+    }
+
+    // List
+    .list-inline {
+        &-item {
+            a {
+                color: $dark-list-item-link-color;
+                &:hover {
+                    color: $dark-list-item-link-hover-color;
+                }
+            }
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+// Note: Include all structural styles (like height, width, margin, padding) here
+
 .navbar {
-    background: #efefef;
+    // background: #efefef; -> This will be controlled by the theme
     clear: both;
     width: 100%;
     display: inline-block;
@@ -12,12 +68,12 @@
         float: left;
         a {
             text-decoration: none;
-            color: #666;
+            // color: #666; -> This will be controlled by the theme
             display: block;
             padding: 1rem;
             font-weight: 500;
             &:hover {
-                color: #333;
+                // color: #333; -> This will be controlled by the theme
             }
         }
     }
@@ -34,10 +90,11 @@
 
 .btn {
     border: none;
-    padding: 1rem;
+    padding: .5rem;
     border-radius: .2rem;
+    margin: .5rem;
     &-primary {
-        color: #fff;
-        background: lighten($color: blue, $amount: 10%);
+        color: $btn-primary-txt-color;
+        background: $btn-primary-bg-color;
     }
 }
